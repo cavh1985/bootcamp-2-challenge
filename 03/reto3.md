@@ -10,3 +10,17 @@
 - Sube un nivel de directorio, es decir, vuelve al directorio anterior.
 - Crea un enlace al archivo que creaste en esta carpeta llamado "enlace.ln".
 - Elimina el directorio "nueva_carpeta" y los archivos que contenga.
+
+# DESARROLLO
+
+cd /home
+mkdir nueva_carpeta
+cd nueva_carpeta
+touch archivo_nuevo.txt
+mv archivo_nuevo.txt archivo_viejo.txt
+echo "Nueva línea de text" >> archivo_viejo.txt
+chmod u=rwx,g=rwx,o=rwx
+cd ..
+ln -s archivo_viejo.txt enlace.ln
+rm -r nueva_carpeta
+
